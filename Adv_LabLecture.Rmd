@@ -1,6 +1,6 @@
 ---
 title: "Markdown, github, ggplot, and dplyer"
-author: "Derek Van Berkel"
+author: "Paige Lund"
 date: "10/24/2024"
 output: html_document
 ---
@@ -248,7 +248,9 @@ library(tidyverse)
 1. Let's also grab some data [here](https://drive.google.com/drive/folders/1YuX5oWjKS6vZx4zNyPwBKuiw9EJYNX5L?usp=sharing). This is spatial point dataset that I have collected as part of a project in the Open Spaces and Moutain Parks of Boulder Colorado. It consist of the points where people have taken pictures using Flickr and Panramio. We have also collected several spatial varibles that might explain why individuals might be taking photographs at these points and all other points in park. We will import the data as a sf spatial dataset.
 
 ```{r}
-boulder <- st_read("C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/BoulderSocialMedia.shp")
+#getwd()
+
+boulder <- st_read("/Users/paigelund/Desktop/EAS_548/advanced_geovisualization_week_two/BoulderSocialMedia/BoulderSocialMedia.shp")
 boulder
 ```
 This Here are the details of data: 
@@ -357,7 +359,7 @@ magma(10)
 
 
 ```{r}
-boulder <- st_read("C:/Users/dbvanber/Dropbox (University of Michigan)/Geovis/Labs/Adv_Week_1/BoulderSocialMedia.shp")
+boulder <- st_read("/Users/paigelund/Desktop/EAS_548/advanced_geovisualization_week_two/BoulderSocialMedia/BoulderSocialMedia.shp")
 ggplot() +
     geom_sf(data = boulder, aes(color=PT_Elev),
     fill = NA, alpha = .2) + 
